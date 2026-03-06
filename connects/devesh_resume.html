@@ -379,9 +379,9 @@
             <ul class="exp-bullets">
               <li>Redesigned IoT data ingestion pipeline by eliminating Azure Digital Twin — <strong>cut node ingestion time 39% (18 → 11 min)</strong> and <strong>relationship ingestion 54% (39 → 18 min)</strong> for 330k nodes / 450k relationships.</li>
               <li>Built multi-hop graph query APIs and time-series historization on <strong>Azure Data Explorer</strong>, enabling root-cause analysis across manufacturing knowledge graph with configurable hops and path filters.</li>
-              <li>Secured entire infrastructure via <strong>virtual networks, private endpoints, and managed identity</strong> across all Azure services (Cosmos DB, ADX, Redis, Storage) — eliminated all List Keys API usage; achieved S360 compliance.</li>
-              <li>Authored Bicep IaC templates for <strong>full one-click deployment</strong>; containerised services with Docker and deployed on AKS; implemented Bring-Your-Own-Store to reduce customer cloud costs.</li>
-              <li>Eliminated <strong>1,152 code warnings</strong>, enforced 70% L0 coverage gate in CI pipeline, and standardised exception handling — reducing production null errors significantly.</li>
+              <li>Secured entire infrastructure via <strong>virtual networks, private endpoints, and managed identity</strong> across all Azure services (Cosmos DB, ADX, Redis, Storage) — eliminated all List Keys API usage.</li>
+              <li>Authored Bicep IaC templates for <strong>full one-click deployment</strong>; containerised API and worker services with Docker, deployed to AKS, and introduced Bring-Your-Own-Store to reduce customer infrastructure costs.</li>
+              <li>Removed <strong>1,152 code warnings</strong>, enforced a 70% L0 test-coverage gate in CI, and standardised HTTP exception handling — measurably reducing production null errors and improving codebase health.</li>
             </ul>
           </div>
 
@@ -392,10 +392,10 @@
               <span class="exp-date">Nov 2023 – May 2025</span>
             </div>
             <ul class="exp-bullets">
-              <li>Integrated Copilot V3 pipeline with RAG-based instruction/example retrieval and automatic KQL-to-Cypher conversion; added typecast injection on generated queries — <strong>raised Copilot accuracy from 40% to 75%+</strong>.</li>
-              <li><strong>First team across MCI</strong> to ship Azure OpenAI Assistant API in production; built filtering layer, conversation IDs, and file-search capability — showcased at <strong>HMI 2025 (Rolls Royce demo)</strong>; assistant accuracy exceeded 75% on bakery dataset.</li>
-              <li>Vectorised entity/schema ingestion in real-time via a dedicated Event Hub + Redis pipeline backed by Azure OpenAI through Managed Identity — <strong>decoupled from main ingestion flow</strong> to eliminate throughput impact.</li>
-              <li>Supported Parsec and Rolls Royce customer POCs end-to-end; <strong>certified MCI Threat Model reviewer</strong> — conducted architecture review for Industry AI team.</li>
+              <li>Integrated Copilot V3 pipeline with RAG-based instruction/example retrieval, automatic KQL-to-Cypher conversion, and column typecast injection on generated queries — <strong>lifted end-to-end query accuracy from 40% to 75%+</strong>.</li>
+              <li><strong>First team across MCI</strong> to ship Azure OpenAI Assistant API in production; built a data-filtering layer, conversation threading, and file-search capability — demonstrated live at <strong>HMI 2025 (Rolls Royce demo)</strong> with accuracy exceeding 75% on customer datasets.</li>
+              <li>Vectorised entity and schema metadata in real-time via a dedicated Event Hub + Redis pipeline using Azure OpenAI through Managed Identity — <strong>fully decoupled from main ingestion</strong> to prevent any throughput degradation.</li>
+              <li>Supported Parsec and Rolls Royce customer POCs end-to-end; <strong>certified MCI Threat Model reviewer</strong> — conducted security architecture review for the Industry AI team's DTT/DMF product.</li>
             </ul>
           </div>
 
@@ -406,8 +406,9 @@
               <span class="exp-date">May 2025 – Present</span>
             </div>
             <ul class="exp-bullets">
-              <li>Delivered OCPM (Object-Centric Process Mining) overview page, edge filter panel with infinite scroll, and 5 chart widgets (bar, pie, line, KPI, activity) in <strong>React / Fluent UI / TypeScript</strong>; feature showcased at PPCC 2025.</li>
-              <li>Authored end-to-end <strong>Playwright test suites</strong> covering OCPM overview, widgets, and filters — significantly reducing manual QA effort.</li>
+              <li>Built the OCPM (Object-Centric Process Mining) overview page from ground up, an edge-filter panel with infinite scroll, and five analytics widgets (bar, pie, line, KPI, activity card) in <strong>React, Fluent UI, and TypeScript</strong>; showcased at PPCC 2025.</li>
+              <li>Made each analytics widget fully configurable, allowing users to remap the underlying metric each widget represents without code changes.</li>
+              <li>Authored comprehensive <strong>Playwright end-to-end test suites</strong> covering the OCPM overview, all widgets, and filter panels — significantly cutting manual QA regression effort across the process mining platform.</li>
             </ul>
           </div>
         </div>
@@ -420,8 +421,8 @@
           </div>
           <div class="exp-role">Intern — Quant Research Team &nbsp;|&nbsp; May 2019 – Jul 2019</div>
           <ul class="exp-bullets">
-            <li>Applied <strong>Principal Component Analysis</strong> to identify largest interest rate curve movements, stress-testing risk models against extreme market scenarios.</li>
-            <li>Built an R tool to compute margin offsets at the currency level across all accounts.</li>
+            <li>Applied <strong>Principal Component Analysis</strong> to isolate dominant interest rate curve movements and stress-tested margin risk models against extreme historical market scenarios.</li>
+            <li>Built an R tool to compute and report margin offsets at the currency level across all trading accounts.</li>
           </ul>
         </div>
 
