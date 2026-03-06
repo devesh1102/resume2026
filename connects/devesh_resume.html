@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Devesh Kumar - Resume</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Calibri', 'Arial', sans-serif;
+    font-size: 10.8pt;
+    color: #1a1a1a;
+    background: #fff;
+    line-height: 1.565;
+  }
+
+  .page {
+    width: 8.5in;
+    height: 11in;
+    margin: 0 auto;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: #0f2d4a;
+    color: #fff;
+    padding: 20px 32px 16px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .header h1 {
+    font-size: 26pt;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 9px;
+  }
+
+  .contact-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 8.5pt;
+    color: #b8cfe4;
+  }
+
+  .contact-row span { white-space: nowrap; }
+
+  /* ── TWO-COLUMN BODY ── */
+  .columns {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .sidebar {
+    width: 30%;
+    background: #f2f5f8;
+    padding: 22px 16px;
+    border-right: 3px solid #0f2d4a;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .main {
+    width: 70%;
+    padding: 22px 24px;
+    overflow: hidden;
+  }
+
+  /* ── SECTION ── */
+  .section { margin-bottom: 24px; }
+
+  .section-title {
+    font-size: 9pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    color: #0f2d4a;
+    border-bottom: 2px solid #0f2d4a;
+    padding-bottom: 3px;
+    margin-bottom: 10px;
+  }
+
+  /* ── EDUCATION ── */
+  .edu-item { margin-bottom: 15px; }
+
+  .edu-degree {
+    font-weight: 700;
+    font-size: 9.5pt;
+    color: #0f2d4a;
+  }
+
+  .edu-school {
+    font-size: 8.8pt;
+    color: #333;
+    margin-top: 1px;
+  }
+
+  .edu-date {
+    font-size: 8.2pt;
+    color: #777;
+    font-style: italic;
+    margin-top: 1px;
+  }
+
+  .edu-detail {
+    font-size: 8.5pt;
+    color: #444;
+    margin-top: 1px;
+  }
+
+  /* ── SKILLS ── */
+  .skill-group { margin-bottom: 12px; }
+
+  .skill-label {
+    font-weight: 700;
+    font-size: 8.8pt;
+    color: #0f2d4a;
+    margin-bottom: 5px;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .tag {
+    background: #0f2d4a;
+    color: #fff;
+    font-size: 7.8pt;
+    padding: 2px 8px;
+    border-radius: 3px;
+    line-height: 1.6;
+  }
+
+  /* ── ACHIEVEMENTS ── */
+  .bullet-list { list-style: none; padding: 0; }
+
+  .bullet-list li {
+    font-size: 8.8pt;
+    padding-left: 11px;
+    position: relative;
+    margin-bottom: 8px;
+    line-height: 1.45;
+    color: #333;
+  }
+
+  .bullet-list li::before {
+    content: '▸';
+    color: #0f2d4a;
+    position: absolute;
+    left: 0;
+    font-size: 8pt;
+  }
+
+  /* ── EXPERIENCE ── */
+  .exp-block {
+    margin-bottom: 8px;
+    border-bottom: 1px solid #dde3ea;
+  }
+
+  .exp-block:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1px;
+  }
+
+  .exp-company {
+    font-weight: 700;
+    font-size: 11pt;
+    color: #0f2d4a;
+  }
+
+  .exp-location {
+    font-size: 8.5pt;
+    color: #666;
+  }
+
+  .exp-role {
+    font-size: 8.8pt;
+    color: #555;
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+
+  .exp-sub { margin-bottom: 14px; }
+
+  .exp-sub-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 4px;
+    border-left: 3px solid #0f2d4a;
+    padding-left: 6px;
+  }
+
+  .exp-sub-title {
+    font-weight: 700;
+    font-size: 9.2pt;
+    color: #0f2d4a;
+  }
+
+  .exp-date {
+    font-size: 8.3pt;
+    color: #666;
+    font-style: italic;
+    white-space: nowrap;
+    margin-left: 8px;
+  }
+
+  .exp-bullets { list-style: none; padding: 0; margin-top: 2px; }
+
+  .exp-bullets li {
+    font-size: 9pt;
+    padding-left: 13px;
+    position: relative;
+    margin-bottom: 7.5px;
+    line-height: 1.5;
+    color: #222;
+  }
+
+  .exp-bullets li::before {
+    content: '•';
+    color: #0f2d4a;
+    position: absolute;
+    left: 2px;
+    font-weight: bold;
+  }
+
+  strong { color: #0f2d4a; }
+
+  @page { size: letter; margin: 0; }
+
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { width: 100%; margin: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Devesh Kumar</h1>
+    <div class="contact-row">
+      <span>Hyderabad, India</span>
+      <span>devesh1102@gmail.com</span>
+      <span>+91 9308716025</span>
+      <span>linkedin.com/in/devesh-kumar</span>
+      <span>github.com/devesh1102</span>
+    </div>
+  </div>
+
+  <!-- COLUMNS -->
+  <div class="columns">
+
+    <!-- ── LEFT SIDEBAR ── -->
+    <div class="sidebar">
+
+      <div class="section">
+        <div class="section-title">Education</div>
+
+        <div class="edu-item">
+          <div class="edu-degree">B.Tech + M.Tech (Dual Degree)</div>
+          <div class="edu-school">IIT Bombay — Electrical Engineering</div>
+          <div class="edu-date">2016 – 2021</div>
+          <div class="edu-detail">CGPA: 8.49 / 10</div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-degree">Minor — Computer Science</div>
+          <div class="edu-school">IIT Bombay</div>
+          <div class="edu-date">2017 – 2021</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Technical Skills</div>
+
+        <div class="skill-group">
+          <div class="skill-label">Languages</div>
+          <div class="skill-tags">
+            <span class="tag">C#</span>
+            <span class="tag">Python</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">SQL</span>
+            <span class="tag">KQL</span>
+            <span class="tag">Bicep</span>
+            <span class="tag">C++</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-label">Azure Platform</div>
+          <div class="skill-tags">
+            <span class="tag">Azure OpenAI</span>
+            <span class="tag">Azure Data Explorer</span>
+            <span class="tag">Azure Functions</span>
+            <span class="tag">Cosmos DB</span>
+            <span class="tag">Event Hub</span>
+            <span class="tag">Redis</span>
+            <span class="tag">AKS</span>
+            <span class="tag">Synapse</span>
+            <span class="tag">Key Vault</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-label">Frameworks & Tools</div>
+          <div class="skill-tags">
+            <span class="tag">.NET / dotnet 8</span>
+            <span class="tag">React</span>
+            <span class="tag">Fluent UI</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Kafka</span>
+            <span class="tag">Playwright</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-label">Practices</div>
+          <div class="skill-tags">
+            <span class="tag">IaC (Bicep)</span>
+            <span class="tag">Managed Identity</span>
+            <span class="tag">VNet / Private Endpoints</span>
+            <span class="tag">RAG</span>
+            <span class="tag">Threat Modeling</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Achievements</div>
+        <ul class="bullet-list">
+          <li>Top 1% among 2 lakh aspirants in JEE Advanced 2016</li>
+          <li>99.1 percentile in JEE Mains 2016</li>
+          <li>Qualified National Talent Search Exam (NTSE)</li>
+        </ul>
+      </div>
+
+    </div>
+    <!-- END SIDEBAR -->
+
+    <!-- ── RIGHT MAIN ── -->
+    <div class="main">
+
+      <div class="section">
+        <div class="section-title">Experience</div>
+
+        <!-- MICROSOFT -->
+        <div class="exp-block">
+          <div class="exp-header">
+            <span class="exp-company">Microsoft India</span>
+            <span class="exp-location">Hyderabad, India</span>
+          </div>
+          <div class="exp-role">Software Engineer II &nbsp;|&nbsp; Jul 2021 – Present</div>
+
+          <!-- Sub: Manufacturing Data Platform -->
+          <div class="exp-sub">
+            <div class="exp-sub-header">
+              <span class="exp-sub-title">Manufacturing Data Platform &amp; Knowledge Graph</span>
+              <span class="exp-date">Jul 2021 – Oct 2023</span>
+            </div>
+            <ul class="exp-bullets">
+              <li>Redesigned IoT data ingestion pipeline by eliminating Azure Digital Twin — <strong>cut node ingestion time 39% (18 → 11 min)</strong> and <strong>relationship ingestion 54% (39 → 18 min)</strong> for 330k nodes / 450k relationships.</li>
+              <li>Built multi-hop graph query APIs and time-series historization on <strong>Azure Data Explorer</strong>, enabling root-cause analysis across manufacturing knowledge graph with configurable hops and path filters.</li>
+              <li>Secured entire infrastructure via <strong>virtual networks, private endpoints, and managed identity</strong> across all Azure services (Cosmos DB, ADX, Redis, Storage) — eliminated all List Keys API usage; achieved S360 compliance.</li>
+              <li>Authored Bicep IaC templates for <strong>full one-click deployment</strong>; containerised services with Docker and deployed on AKS; implemented Bring-Your-Own-Store to reduce customer cloud costs.</li>
+              <li>Eliminated <strong>1,152 code warnings</strong>, enforced 70% L0 coverage gate in CI pipeline, and standardised exception handling — reducing production null errors significantly.</li>
+            </ul>
+          </div>
+
+          <!-- Sub: AI Copilot -->
+          <div class="exp-sub">
+            <div class="exp-sub-header">
+              <span class="exp-sub-title">AI Copilot &amp; Manufacturing Agent</span>
+              <span class="exp-date">Nov 2023 – May 2025</span>
+            </div>
+            <ul class="exp-bullets">
+              <li>Integrated Copilot V3 pipeline with RAG-based instruction/example retrieval and automatic KQL-to-Cypher conversion; added typecast injection on generated queries — <strong>raised Copilot accuracy from 40% to 75%+</strong>.</li>
+              <li><strong>First team across MCI</strong> to ship Azure OpenAI Assistant API in production; built filtering layer, conversation IDs, and file-search capability — showcased at <strong>HMI 2025 (Rolls Royce demo)</strong>; assistant accuracy exceeded 75% on bakery dataset.</li>
+              <li>Vectorised entity/schema ingestion in real-time via a dedicated Event Hub + Redis pipeline backed by Azure OpenAI through Managed Identity — <strong>decoupled from main ingestion flow</strong> to eliminate throughput impact.</li>
+              <li>Supported Parsec and Rolls Royce customer POCs end-to-end; <strong>certified MCI Threat Model reviewer</strong> — conducted architecture review for Industry AI team.</li>
+            </ul>
+          </div>
+
+          <!-- Sub: Power Automate -->
+          <div class="exp-sub">
+            <div class="exp-sub-header">
+              <span class="exp-sub-title">Power Automate Process Mining</span>
+              <span class="exp-date">May 2025 – Present</span>
+            </div>
+            <ul class="exp-bullets">
+              <li>Delivered OCPM (Object-Centric Process Mining) overview page, edge filter panel with infinite scroll, and 5 chart widgets (bar, pie, line, KPI, activity) in <strong>React / Fluent UI / TypeScript</strong>; feature showcased at PPCC 2025.</li>
+              <li>Authored end-to-end <strong>Playwright test suites</strong> covering OCPM overview, widgets, and filters — significantly reducing manual QA effort.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CME -->
+        <div class="exp-block">
+          <div class="exp-header">
+            <span class="exp-company">Chicago Mercantile Exchange (CME) Group</span>
+            <span class="exp-location">Bangalore, India</span>
+          </div>
+          <div class="exp-role">Intern — Quant Research Team &nbsp;|&nbsp; May 2019 – Jul 2019</div>
+          <ul class="exp-bullets">
+            <li>Applied <strong>Principal Component Analysis</strong> to identify largest interest rate curve movements, stress-testing risk models against extreme market scenarios.</li>
+            <li>Built an R tool to compute margin offsets at the currency level across all accounts.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <!-- END MAIN -->
+
+  </div>
+</div>
+</body>
+</html>
