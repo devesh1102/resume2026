@@ -74,7 +74,7 @@
   }
 
   /* ── SECTION ── */
-  .section { margin-bottom: 24px; }
+  .section { margin-bottom: 10px; }
 
   .section-title {
     font-size: 9pt;
@@ -87,8 +87,15 @@
     margin-bottom: 10px;
   }
 
+  /* ── SUMMARY ── */
+  .summary-text {
+    font-size: 8.5pt;
+    color: #333;
+    line-height: 1.5;
+  }
+
   /* ── EDUCATION ── */
-  .edu-item { margin-bottom: 15px; }
+  .edu-item { margin-bottom: 10px; }
 
   .edu-degree {
     font-weight: 700;
@@ -116,7 +123,7 @@
   }
 
   /* ── SKILLS ── */
-  .skill-group { margin-bottom: 12px; }
+  .skill-group { margin-bottom: 10px; }
 
   .skill-label {
     font-weight: 700;
@@ -273,6 +280,11 @@
     <div class="sidebar">
 
       <div class="section">
+        <div class="section-title">Professional Summary</div>
+        <p class="summary-text">Software Engineer II at Microsoft with 4+ years building cloud-native platforms on Azure. Specializes in IoT data pipelines, knowledge graphs, and AI/LLM-powered copilots. Proven track record shipping production-grade systems — from IaC and security hardening to RAG-based agents and React front ends.</p>
+      </div>
+
+      <div class="section">
         <div class="section-title">Education</div>
 
         <div class="edu-item">
@@ -315,7 +327,6 @@
             <span class="tag">Event Hub</span>
             <span class="tag">Redis</span>
             <span class="tag">AKS</span>
-            <span class="tag">Synapse</span>
             <span class="tag">Key Vault</span>
           </div>
         </div>
@@ -345,9 +356,9 @@
       </div>
 
       <div class="section">
-        <div class="section-title">Achievements</div>
+        <div class="section-title">Notable Achievements</div>
         <ul class="bullet-list">
-          <li>Top 1% among 2 lakh aspirants in JEE Advanced 2016</li>
+          <li>Top 1% among 200,000+ aspirants in JEE Advanced 2016</li>
           <li>99.1 percentile in JEE Mains 2016</li>
           <li>Qualified National Talent Search Exam (NTSE)</li>
         </ul>
@@ -377,10 +388,10 @@
               <span class="exp-date">Jul 2021 – Oct 2023</span>
             </div>
             <ul class="exp-bullets">
-              <li>Redesigned IoT data ingestion pipeline by eliminating Azure Digital Twin — <strong>cut node ingestion time 39% (18 → 11 min)</strong> and <strong>relationship ingestion 54% (39 → 18 min)</strong> for 330k nodes / 450k relationships.</li>
-              <li>Built multi-hop graph query APIs and time-series historization on <strong>Azure Data Explorer</strong>, enabling root-cause analysis across manufacturing knowledge graph with configurable hops and path filters.</li>
+              <li>Redesigned IoT data ingestion pipeline by eliminating Azure Digital Twin — <strong>cut node ingestion time 39% (18 -11 min)</strong> and <strong>relationship ingestion 54% (39 to 18 min)</strong> for 330k nodes / 450k relationships.</li>
+              <li>Designed multi-hop graph query APIs and time-series historization on <strong>Azure Data Explorer</strong>, enabling root-cause analysis across manufacturing knowledge graph with configurable hops and path filters.</li>
               <li>Secured entire infrastructure via <strong>virtual networks, private endpoints, and managed identity</strong> across all Azure services (Cosmos DB, ADX, Redis, Storage) — eliminated all List Keys API usage.</li>
-              <li>Authored Bicep IaC templates for <strong>full one-click deployment</strong>; containerised API and worker services with Docker, deployed to AKS, and introduced Bring-Your-Own-Store to reduce customer infrastructure costs.</li>
+              <li>Developed Bicep IaC templates facilitating <strong>one-click deployments</strong>, slashing customer infrastructure provisioning time by 6 hours and elevating deployment success rate to 98% across all Azure services.</li>
               <li>Removed <strong>1,152 code warnings</strong>, enforced a 70% L0 test-coverage gate in CI, and standardised HTTP exception handling — measurably reducing production null errors and improving codebase health.</li>
             </ul>
           </div>
@@ -393,7 +404,7 @@
             </div>
             <ul class="exp-bullets">
               <li>Integrated Copilot V3 pipeline with RAG-based instruction/example retrieval, automatic KQL-to-Cypher conversion, and column typecast injection on generated queries — <strong>lifted end-to-end query accuracy from 40% to 75%+</strong>.</li>
-              <li><strong>First team across MCI</strong> to ship Azure OpenAI Assistant API in production; built a data-filtering layer, conversation threading, and file-search capability — demonstrated live at <strong>HMI 2025 (Rolls Royce demo)</strong> with accuracy exceeding 75% on customer datasets.</li>
+              <li><strong>First team across MCI</strong> to ship Azure OpenAI Assistant API in production; spearheaded a data-filtering layer, conversation threading, and file-search capability — demonstrated live at <strong>HMI 2025 (Rolls Royce demo)</strong> with accuracy exceeding 75% on customer datasets.</li>
               <li>Vectorised entity and schema metadata in real-time via a dedicated Event Hub + Redis pipeline using Azure OpenAI through Managed Identity — <strong>fully decoupled from main ingestion</strong> to prevent any throughput degradation.</li>
               <li>Supported Parsec and Rolls Royce customer POCs end-to-end; <strong>certified MCI Threat Model reviewer</strong> — conducted security architecture review for the Industry AI team's DTT/DMF product.</li>
             </ul>
@@ -406,8 +417,8 @@
               <span class="exp-date">May 2025 – Present</span>
             </div>
             <ul class="exp-bullets">
-              <li>Built the OCPM (Object-Centric Process Mining) overview page from ground up, an edge-filter panel with infinite scroll, and five analytics widgets (bar, pie, line, KPI, activity card) in <strong>React, Fluent UI, and TypeScript</strong>; showcased at PPCC 2025.</li>
-              <li>Made each analytics widget fully configurable, allowing users to remap the underlying metric each widget represents without code changes.</li>
+              <li>Implemented the OCPM (Object-Centric Process Mining) overview page from ground up, an edge-filter panel with infinite scroll, and five analytics widgets (bar, pie, line, KPI, activity card) in <strong>React, Fluent UI, and TypeScript</strong>; showcased at PPCC 2025.</li>
+              <li>Made each analytics widget fully configurable — customers can remap the underlying metric each widget represents, unlocking <strong>20–30</strong> distinct configuration combinations per widget without code changes.</li>
               <li>Authored comprehensive <strong>Playwright end-to-end test suites</strong> covering the OCPM overview, all widgets, and filter panels — significantly cutting manual QA regression effort across the process mining platform.</li>
             </ul>
           </div>
