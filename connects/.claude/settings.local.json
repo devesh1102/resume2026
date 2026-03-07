@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"C:/Users/deveshkumar/Downloads/resume_2026/connects\" && node gen_pdf.js 2>&1)"
+    ]
+  }
+}
