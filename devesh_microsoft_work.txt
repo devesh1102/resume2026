@@ -1,0 +1,18 @@
+DEVESH KUMAR — MICROSOFT INDIA (Jul 2021 – Present)
+Software Engineer II | Hyderabad, India
+
+1. MANUFACTURING DATA PLATFORM & KNOWLEDGE GRAPH (Jul 2021 – Oct 2023)
+Rebuilt the IoT ingestion pipeline by removing Azure Digital Twin, cutting node ingestion 39% (18→11 min) and relationship ingestion 54% (39→18 min) for 330k nodes / 450k relationships. Designed multi-hop graph query APIs on Azure Data Explorer, secured all infrastructure via VNet/private endpoints/Managed Identity, and built Bicep IaC templates enabling one-click deployments with 98% success rate.
+
+2. AI COPILOT & MANUFACTURING AGENT (Nov 2023 – May 2025)
+Led LLM agent development — first team across MCI to ship Azure OpenAI Assistant API in production. Integrated RAG-based retrieval, KQL-to-Cypher conversion, and typecast injection, lifting query accuracy from 40% to 75%+. Built real-time vectorization via Event Hub + Redis, decoupled from main ingestion. Demonstrated live at HMI 2025 during Rolls Royce customer engagement. Certified MCI Threat Model reviewer.
+
+3. POWER AUTOMATE PROCESS MINING (May 2025 – Present)
+Built the OCPM overview page, edge-filter panel, and five configurable analytics widgets from scratch in React, Fluent UI, and TypeScript. Authored Playwright end-to-end test suites covering the full platform, showcased at PPCC 2025.
+
+SKILLS
+Languages: C#, Python, TypeScript, SQL, KQL, Bicep, C++
+Azure Platform: Azure OpenAI, Azure Data Explorer, Cosmos DB, Event Hub, Redis, Azure Functions, AKS
+Frameworks & Tools: .NET 8, React, Fluent UI, Docker, Kafka, Playwright
+AI / ML: RAG, LLM integration, Azure OpenAI Assistant API, Prompt Engineering, Vectorization, Responsible AI
+Practices: IaC (Bicep), Managed Identity, VNet / Private Endpoints, Threat Modeling, CI/CD

@@ -1,4 +1,4 @@
-# Behavioral Interview Prep — Devesh Kumar
+    # Behavioral Interview Prep — Devesh Kumar
 
 All answers are grounded in real experiences from Microsoft connects (Jul 2021 – Oct 2025).
 Each file uses the **STAR format**: Situation → Task → Action → Result.
@@ -21,6 +21,7 @@ Each file uses the **STAR format**: Situation → Task → Action → Result.
 | [10_process_improvement.md](./10_process_improvement.md) | Process improvement / efficiency | 1,152 warnings + 70% coverage gate |
 | [11_customer_focus.md](./11_customer_focus.md) | Customer focus / going above and beyond | Parsec tuning; Rolls Royce HMI |
 | [12_leadership_and_influence.md](./12_leadership_and_influence.md) | Leadership / influence without authority | Threat model v-team; FE mentoring |
+| [13_kafka_eventhub.md](./13_kafka_eventhub.md) | Kafka / Event Hub — technical talking point | IoT trigger + vectorization pipeline |
 
 ---
 

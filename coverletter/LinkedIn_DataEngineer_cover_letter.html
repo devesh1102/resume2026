@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Devesh Kumar - Cover Letter - LinkedIn</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Calibri', 'Arial', sans-serif;
+    font-size: 11pt;
+    color: #1a1a1a;
+    background: #fff;
+    line-height: 1.6;
+  }
+  .page {
+    width: 8.5in;
+    min-height: 11in;
+    margin: 0 auto;
+    padding: 0.75in 0.85in 0.75in 0.85in;
+    background: #fff;
+  }
+  .header {
+    border-bottom: 2px solid #0f2d4a;
+    padding-bottom: 14px;
+    margin-bottom: 28px;
+  }
+  .name {
+    font-size: 22pt;
+    font-weight: 700;
+    color: #0f2d4a;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+  .contact-row {
+    font-size: 9pt;
+    color: #555;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .contact-row span { white-space: nowrap; }
+  .date-line {
+    font-size: 10.5pt;
+    color: #444;
+    margin-bottom: 20px;
+  }
+  .recipient {
+    margin-bottom: 24px;
+    font-size: 10.5pt;
+    color: #222;
+  }
+  .salutation {
+    margin-bottom: 18px;
+    font-size: 11pt;
+    font-weight: 600;
+    color: #0f2d4a;
+  }
+  p {
+    margin-bottom: 16px;
+    font-size: 10.8pt;
+    color: #222;
+    text-align: justify;
+  }
+  .closing {
+    margin-top: 28px;
+    font-size: 10.8pt;
+    color: #222;
+  }
+  .closing-name {
+    margin-top: 10px;
+    font-size: 11pt;
+    font-weight: 700;
+    color: #0f2d4a;
+  }
+  strong { color: #0f2d4a; }
+  @page { size: letter; margin: 0; }
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="name">Devesh Kumar</div>
+    <div class="contact-row">
+      <span>Hyderabad, India</span>
+      <span>devesh1102@gmail.com</span>
+      <span>+91 9308716025</span>
+      <span>linkedin.com/in/devesh-kumar</span>
+      <span>github.com/devesh1102</span>
+    </div>
+    <div style="font-size:10pt;color:#0f2d4a;font-style:italic;margin-top:6px;">Software Engineer II — Microsoft India | Power Automate</div>
+  </div>
+
+  <div class="date-line">March 29, 2026</div>
+
+  <div class="recipient">
+    Hiring Team<br>
+    LinkedIn
+  </div>
+
+  <div class="salutation">Dear Hiring Team,</div>
+
+  <!-- PARAGRAPH 1 -->
+  <p>I am applying for the Data Engineer role on LinkedIn's Data Science team. The work of turning large-scale member and product data into decision-enabling infrastructure maps directly onto the pipelines I have spent four years designing at Microsoft — where the central challenge is the same: make data flow fast, clean, and queryable at scale for people who depend on it.</p>
+
+  <!-- PARAGRAPH 2 -->
+  <p>At Microsoft, I owned the end-to-end IoT data ingestion pipeline for a cloud-native manufacturing knowledge graph serving enterprise customers including Rolls Royce and Parsec. By redesigning the architecture to eliminate a costly intermediary layer (Azure Digital Twin) and optimising the GROUP BY processing in Azure Data Explorer, I reduced <strong>node ingestion time by 39% (18 → 11 min)</strong> and <strong>relationship ingestion by 54% (39 → 18 min)</strong> for a graph of <strong>330,000 nodes and 450,000 relationships</strong>. Beyond throughput, I designed a separate real-time ETL stream — an Event Hub + Redis pipeline for entity and schema vectorization — fully decoupled from the main ingestion to prevent any interference with production data flow. I also led a cost-modelling analysis comparing ADLS vs. Azure Data Explorer for storing <strong>~50 million rows</strong>, directly informing the team's storage architecture decisions. On the query side, I built multi-hop graph query APIs on ADX using KQL, enabling analysts to run root-cause analysis across the full production graph with configurable depth and path filters.</p>
+
+  <!-- PARAGRAPH 3 -->
+  <p>I would welcome the opportunity to bring this pipeline and data-platform experience to LinkedIn's scale. Thank you for your consideration — I look forward to the possibility of a conversation.</p>
+
+  <div class="closing">
+    Sincerely,
+    <div class="closing-name">Devesh Kumar</div>
+  </div>
+
+</div>
+</body>
+</html>

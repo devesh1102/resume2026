@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node gen_cover_letter.js \"../coverletter/Myntra_cover_letter.html\" \"../coverletter/Myntra.pdf\")",
+      "Bash(node gen_cover_letter.js \"../coverletter/LinkedIn_cover_letter.html\" \"../coverletter/LinkedIn.pdf\")",
+      "Bash(node:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}
