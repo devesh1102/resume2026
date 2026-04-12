@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Devesh Kumar - Resume</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Calibri', Arial, sans-serif;
+    font-size: 8.4pt;
+    color: #111;
+    background: #fff;
+    line-height: 1.27;
+  }
+
+  .page {
+    width: 8.5in;
+    margin: 0 auto;
+    padding: 0.22in 0.45in 0.18in;
+    background: #fff;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 5px;
+  }
+
+  .header-left {
+    flex: 0 0 58%;
+  }
+
+  .header-left h1 {
+    font-size: 24pt;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    color: #111;
+    margin-bottom: 3px;
+  }
+
+  .header-left .tagline {
+    font-size: 9.5pt;
+    color: #333;
+  }
+
+  .header-divider {
+    width: 1.5px;
+    background: #bbb;
+    align-self: stretch;
+    margin: 2px 16px 2px 0;
+    flex-shrink: 0;
+  }
+
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    padding-top: 3px;
+    flex: 1;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 8.5pt;
+    color: #222;
+  }
+
+  .contact-item a { color: #111; text-decoration: none; }
+
+  .ci {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+    background: #1a1a2e;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 7pt;
+    font-weight: 700;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  /* ── SECTIONS ── */
+  .section { margin-bottom: 4px; }
+
+  .section-title {
+    font-size: 11pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    color: #111;
+    border-bottom: 1.5px solid #111;
+    padding-bottom: 1px;
+    margin-bottom: 5px;
+  }
+
+  /* ── SUMMARY ── */
+  .summary-text {
+    font-size: 9pt;
+    line-height: 1.42;
+    text-align: justify;
+  }
+
+  /* ── SKILLS ── */
+  .skills-text {
+    font-size: 9pt;
+    line-height: 1.7;
+  }
+
+  .skills-text span::before {
+    content: " \2022  ";
+    font-weight: 700;
+  }
+
+  .skills-text span:first-child::before {
+    content: "\2022  ";
+  }
+
+  /* ── EXPERIENCE ── */
+  .exp-block { margin-bottom: 4px; }
+  .exp-block:last-child { margin-bottom: 0; }
+
+  .exp-role-company {
+    font-weight: 700;
+    font-size: 9.5pt;
+    margin-bottom: 1px;
+  }
+
+  .exp-loc-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 8.5pt;
+    color: #444;
+    margin-bottom: 4px;
+  }
+
+  .exp-sub { margin-bottom: 3px; padding-left: 6px; }
+
+  .exp-sub-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+  }
+
+  .exp-sub-title {
+    font-weight: 700;
+    font-style: italic;
+    font-size: 8.8pt;
+    color: #222;
+  }
+
+  .exp-sub-date {
+    font-size: 8.5pt;
+    color: #444;
+    font-style: italic;
+    white-space: nowrap;
+    margin-left: 8px;
+  }
+
+  .exp-bullets {
+    list-style: disc;
+    padding-left: 15px;
+  }
+
+  .exp-bullets li {
+    font-size: 8.4pt;
+    line-height: 1.28;
+    margin-bottom: 0.5px;
+    text-align: justify;
+    color: #111;
+  }
+
+  /* ── EDUCATION ── */
+  .edu-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .edu-degree { font-weight: 700; font-size: 9.5pt; }
+  .edu-date   { font-size: 8.5pt; color: #444; }
+  .edu-school { font-size: 9pt; color: #333; margin-top: 1px; }
+
+  /* ── ACHIEVEMENTS ── */
+  .achieve-list { list-style: disc; padding-left: 16px; }
+  .achieve-list li { font-size: 9pt; line-height: 1.42; margin-bottom: 2px; }
+
+  strong { font-weight: 700; }
+
+  @page { size: letter; margin: 0; }
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <h1>Devesh Kumar</h1>
+      <div class="tagline">Software Engineer II | Azure, AI/LLM, IoT, Cloud-Native</div>
+    </div>
+    <div class="header-divider"></div>
+    <div class="header-right">
+      <div class="contact-item">
+        <span class="ci">✉</span>
+        <a href="mailto:devesh1102@gmail.com">devesh1102@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <span class="ci">☎</span>
+        +91 9308716025
+      </div>
+<div class="contact-item">
+        <span class="ci" style="font-family: Georgia, serif; font-size: 6.5pt;">in</span>
+        <a href="https://www.linkedin.com/in/devesh1102">linkedin.com/in/devesh1102</a>
+      </div>
+      <div class="contact-item">
+        <span class="ci" style="font-size: 6pt;">gh</span>
+        <a href="https://github.com/devesh1102">github.com/devesh1102</a>
+      </div>
+      <div class="contact-item">
+        <span class="ci" style="font-size: 6pt;">🌐</span>
+        <a href="https://devesh1102.github.io">devesh1102.github.io</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="section">
+    <div class="section-title">Summary</div>
+    <p class="summary-text">Software Engineer II at Microsoft with 4+ years building cloud-native platforms on Azure. Specializes in IoT data pipelines, knowledge graphs, and AI/LLM-powered copilots. Proven track record shipping production-grade microservices — from IaC and security hardening to Retrieval-Augmented Generation (RAG)-based agents and React front ends. First team across MCI to ship Azure OpenAI Assistant API in production; lifted Copilot query accuracy from 40% to 75%+ and architected a real-time vectorization pipeline avoiding projected 30–50% throughput slowdown.</p>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section">
+    <div class="section-title">Skills</div>
+    <div class="skills-text">
+      <span>C#</span><span>Python</span><span>TypeScript</span><span>SQL / KQL</span><span>Bicep</span><span>C++</span><span>Azure OpenAI</span><span>Azure Data Explorer</span><span>Cosmos DB</span><span>Event Hub</span><span>Redis</span><span>Kubernetes (AKS)</span><span>React</span><span>Fluent UI</span><span>Docker</span><span>Kafka</span><span>Playwright</span><span>Git</span><span>REST APIs</span><span>CI/CD</span><span>IaC (Bicep)</span><span>Managed Identity</span><span>RAG</span><span>Agile/Scrum</span><span>Threat Modeling</span>
+    </div>
+  </div>
+
+  <!-- PROFESSIONAL EXPERIENCE -->
+  <div class="section">
+    <div class="section-title">Professional Experience</div>
+
+    <!-- MICROSOFT -->
+    <div class="exp-block">
+      <div class="exp-role-company">Software Engineer II | Microsoft India</div>
+      <div class="exp-loc-date">
+        <span>Hyderabad, India</span>
+        <span>Jul 2021 – Present</span>
+      </div>
+
+      <div class="exp-sub">
+        <div class="exp-sub-header">
+          <span class="exp-sub-title">Power Automate Process Mining</span>
+          <span class="exp-sub-date">May 2025 – Present</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Implemented the OCPM (Object-Centric Process Mining) overview page from ground up, an edge-filter panel with infinite scroll, and five analytics widgets (bar, pie, line, KPI, activity card) in <strong>React, Fluent UI, and TypeScript</strong>; showcased at PPCC 2025.</li>
+          <li>Made each analytics widget fully configurable — customers can remap the underlying metric each widget represents, unlocking <strong>20–30 distinct configuration combinations</strong> per widget without code changes.</li>
+          <li>Redesigned the process details page to differentiate object-centric from case-centric processes; conducted a <strong>Goal-to-Process POC</strong> using Copilot Studio agent to convert business vocabulary rules into object-centric event log models with web-search for discovering missing entities.</li>
+          <li>Authored comprehensive <strong>Playwright end-to-end test suites</strong> covering OCPM overview, all widgets, and filter panels — significantly cutting manual QA regression effort across the process mining platform.</li>
+        </ul>
+      </div>
+
+      <div class="exp-sub">
+        <div class="exp-sub-header">
+          <span class="exp-sub-title">AI Copilot and Manufacturing Agent</span>
+          <span class="exp-sub-date">Nov 2023 – May 2025</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Integrated Copilot V3 with RAG retrieval, KQL-to-Cypher conversion, and typecast injection — <strong>lifted query accuracy from 40% to 75%+</strong>.</li>
+          <li><strong>First team across MCI</strong> to ship Azure OpenAI Assistant API in production; spearheaded data-filtering, conversation threading, and file-search — demonstrated live at <strong>HMI 2025 (Rolls Royce demo)</strong> with 75%+ accuracy on customer datasets.</li>
+          <li>Architected a real-time vectorization pipeline for entity and schema metadata via <strong>dedicated Event Hub + Redis + Azure OpenAI</strong> through Managed Identity, fully decoupled from main ingestion — <strong>avoided projected 30–50% throughput slowdown</strong>.</li>
+          <li>Created <strong>5 materialized ADX views</strong> (Downtime, Actual/Scheduled Production &amp; Consumption) as structured data slices for the assistant — eliminated complex traversal hallucinations.</li>
+          <li>Ran entity decomposition POC achieving same Copilot accuracy with <strong>50% fewer instructions and 62% fewer examples</strong>; conducted Responsible AI and jailbreak testing, identifying real vulnerabilities submitted to the RAI Review process.</li>
+          <li>Supported Parsec and Rolls Royce POCs end-to-end; <strong>certified MCI Threat Model reviewer</strong> — conducted security architecture review for the Industry AI team's DTT/DMF product.</li>
+        </ul>
+      </div>
+
+      <div class="exp-sub">
+        <div class="exp-sub-header">
+          <span class="exp-sub-title">Manufacturing Data Platform and Knowledge Graph</span>
+          <span class="exp-sub-date">Jul 2021 – Oct 2023</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Led Python benchmarking of ADT, ADX, and Cosmos (parallel API calls, latency distributions); found <strong>ADX 5–6x faster</strong> than cold storage — drove ADT removal, <strong>cutting node ingestion 39% (18→11 min)</strong> and <strong>relationship ingestion 54% (39→18 min)</strong> for 330k nodes / 450k relationships.</li>
+          <li>Designed multi-hop graph query APIs and time-series historization on <strong>Azure Data Explorer</strong>, enabling root-cause analysis across the manufacturing knowledge graph with configurable hops and path filters.</li>
+          <li>Secured entire infrastructure via <strong>virtual networks, private endpoints, and managed identity</strong> across all Azure services (Cosmos DB, ADX, Redis, Storage) — eliminated all List Keys API usage.</li>
+          <li>Developed Bicep IaC templates facilitating <strong>one-click deployments</strong>, slashing customer infrastructure provisioning time by 6 hours and elevating deployment success rate to 98%.</li>
+          <li>Removed <strong>1,152 code warnings</strong> and enforced a <strong>70% L0 test-coverage gate</strong> in CI, improving overall codebase reliability.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CME -->
+    <div class="exp-block">
+      <div class="exp-role-company">Intern – Quant Research Team | Chicago Mercantile Exchange (CME) Group</div>
+      <div class="exp-loc-date">
+        <span>Bangalore, India</span>
+        <span>May 2019 – Jul 2019</span>
+      </div>
+      <ul class="exp-bullets">
+        <li>Applied <strong>Principal Component Analysis</strong> to isolate interest rate curve movements and stress-tested margin risk models against extreme historical scenarios.</li>
+        <li>Built an R tool to compute and report margin offsets at the currency level across all trading accounts.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section">
+    <div class="section-title">Education</div>
+    <div class="edu-row">
+      <span class="edu-degree">B.Tech / M.Tech (Dual Degree) — Electrical Engineering, Minor in Computer Science and Engineering</span>
+      <span class="edu-date">2016 – 2021</span>
+    </div>
+    <div class="edu-school">IIT Bombay &nbsp;|&nbsp; CGPA: 8.49 / 10</div>
+  </div>
+
+  <!-- ACHIEVEMENTS -->
+  <div class="section">
+    <div class="section-title">Achievements</div>
+    <ul class="achieve-list">
+      <li>Top 1% among 200,000+ aspirants in JEE Advanced 2016</li>
+      <li>99.1 percentile in JEE Mains 2016</li>
+      <li>Qualified National Talent Search Exam (NTSE)</li>
+    </ul>
+  </div>
+
+</div>
+</body>
+</html>
