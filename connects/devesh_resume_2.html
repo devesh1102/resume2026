@@ -202,17 +202,16 @@
   .exp-role {
     font-size: 8.8pt;
     color: #555;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-style: italic;
   }
 
-  .exp-sub { margin-bottom: 14px; }
+  .exp-sub { margin-bottom: 5px; }
 
   .exp-sub-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 4px;
     border-left: 3px solid #0f2d4a;
     padding-left: 6px;
   }
@@ -237,7 +236,7 @@
     font-size: 9pt;
     padding-left: 13px;
     position: relative;
-    margin-bottom: 7.5px;
+    /* margin-bottom: 7.5px; */
     line-height: 1.5;
     color: #222;
   }
@@ -392,6 +391,7 @@
             <ul class="exp-bullets">
               <li>Implemented the OCPM (Object-Centric Process Mining) overview page from ground up, an edge-filter panel with infinite scroll, and five analytics widgets (bar, pie, line, KPI, activity card) in <strong>React, Fluent UI, and TypeScript</strong>; showcased at PPCC 2025.</li>
               <li>Made each analytics widget fully configurable -customers can remap the underlying metric each widget represents, unlocking <strong>20-30</strong> distinct configuration combinations per widget without code changes.</li>
+              <li>Redesigned the process details page to differentiate object-centric from case-centric processes; conducted a <strong>Goal-to-Process POC</strong> using Copilot Studio agent to convert business vocabulary rules into object-centric event log models with web-search for discovering missing entities.</li>
               <li>Authored comprehensive <strong>Playwright end-to-end test suites</strong> covering the OCPM overview, all widgets, and filter panels -significantly cutting manual QA regression effort across the process mining platform.</li>
             </ul>
           </div>
@@ -403,9 +403,11 @@
               <span class="exp-date">Nov 2023 -May 2025</span>
             </div>
             <ul class="exp-bullets">
-              <li>Integrated Copilot V3 pipeline with RAG-based instruction/example retrieval, automatic KQL-to-Cypher conversion, and column typecast injection on generated queries -<strong>lifted end-to-end query accuracy from 40% to 75%+</strong>.</li>
+              <li>Integrated Copilot V3 with RAG retrieval, KQL-to-Cypher conversion, and typecast injection on generated queries -<strong>lifted query accuracy from 40% to 75%+</strong>.</li>
               <li><strong>First team across MCI</strong> to ship Azure OpenAI Assistant API in production; spearheaded a data-filtering layer, conversation threading, and file-search capability -demonstrated live at <strong>HMI 2025 (Rolls Royce demo)</strong> with accuracy exceeding 75% on customer datasets.</li>
-              <li>Vectorised entity and schema metadata in real-time via a dedicated Event Hub + Redis pipeline using Azure OpenAI through Managed Identity -<strong>fully decoupled from main ingestion</strong> to prevent any throughput degradation.</li>
+              <li>Architected a real-time vectorization pipeline for entity and schema metadata using a <strong>dedicated Event Hub + Redis + Azure OpenAI</strong> stack via Managed Identity, kept it entirely separate from the main ingestion flow, <strong>avoiding a projected 30-50% slowdown</strong> in overall ingestion throughput.</li>
+              <li>Created <strong>5 materialized ADX views</strong> (Downtime, Actual/Scheduled Production &amp; Consumption) as structured data slices for the assistant -eliminated complex traversal hallucinations.</li>
+              <li>Ran entity decomposition POC achieving same Copilot accuracy with <strong>50% fewer instructions and 62% fewer examples</strong>; conducted Responsible AI and jailbreak testing, identifying real vulnerabilities submitted to the RAI Review process.</li>
               <li>Supported Parsec and Rolls Royce customer POCs end-to-end; <strong>certified MCI Threat Model reviewer</strong> -conducted security architecture review for the Industry AI team's DTT/DMF product.</li>
             </ul>
           </div>
@@ -417,11 +419,11 @@
               <span class="exp-date">Jul 2021 -Oct 2023</span>
             </div>
             <ul class="exp-bullets">
-              <li>Redesigned IoT data ingestion pipeline by eliminating Azure Digital Twin -<strong>cut node ingestion time 39% (18 -11 min)</strong> and <strong>relationship ingestion 54% (39 to 18 min)</strong> for 330k nodes / 450k relationships.</li>
+              <li>Led Python benchmarking of ADT, ADX, and Cosmos (parallel API calls, latency distributions); found <strong>ADX 5-6x faster</strong> than cold storage -drove the ADT removal decision and <strong>cut node ingestion 39% (18 -11 min)</strong> and <strong>relationship ingestion 54% (39 to 18 min)</strong> for 330k nodes / 450k relationships.</li>
               <li>Designed multi-hop graph query APIs and time-series historization on <strong>Azure Data Explorer</strong>, enabling root-cause analysis across manufacturing knowledge graph with configurable hops and path filters.</li>
               <li>Secured entire infrastructure via <strong>virtual networks, private endpoints, and managed identity</strong> across all Azure services (Cosmos DB, ADX, Redis, Storage) -eliminated all List Keys API usage.</li>
               <li>Developed Bicep IaC templates facilitating <strong>one-click deployments</strong>, slashing customer infrastructure provisioning time by 6 hours and elevating deployment success rate to 98% across all Azure services.</li>
-              <li>Removed <strong>1,152 code warnings</strong>, enforced a 70% L0 test-coverage gate in CI, and standardised HTTP exception handling -measurably reducing production null errors and improving codebase health.</li>
+              <li>Removed <strong>1,152 code warnings</strong> and enforced a 70% L0 test-coverage gate in CI.</li>
             </ul>
           </div>
         </div>
