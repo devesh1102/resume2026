@@ -5,7 +5,11 @@
       "Bash(node gen_cover_letter.js \"../coverletter/LinkedIn_cover_letter.html\" \"../coverletter/LinkedIn.pdf\")",
       "Bash(node:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(xargs grep:*)",
+      "Bash(rm -rf \"/c/Users/deveshkumar/.claude/plugins/marketplaces/anthropics-claude-plugins-official/plugins/leetcode-analyzer\")",
+      "Bash(mkdir -p /c/Users/deveshkumar/.claude/commands)"
     ]
   }
 }

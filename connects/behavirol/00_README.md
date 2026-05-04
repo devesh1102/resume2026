@@ -22,6 +22,7 @@ Each file uses the **STAR format**: Situation → Task → Action → Result.
 | [11_customer_focus.md](./11_customer_focus.md) | Customer focus / going above and beyond | Parsec tuning; Rolls Royce HMI |
 | [12_leadership_and_influence.md](./12_leadership_and_influence.md) | Leadership / influence without authority | Threat model v-team; FE mentoring |
 | [13_kafka_eventhub.md](./13_kafka_eventhub.md) | Kafka / Event Hub — technical talking point | IoT trigger + vectorization pipeline |
+| [14_redis.md](./14_redis.md) | Redis — technical talking point | Embedding store + low-latency Copilot retrieval |
 
 ---
 

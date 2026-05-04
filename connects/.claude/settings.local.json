@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(cd \"C:/Users/deveshkumar/Downloads/resume_2026/connects\" && node gen_pdf.js 2>&1)"
+      "Bash(cd \"C:/Users/deveshkumar/Downloads/resume_2026/connects\" && node gen_pdf.js 2>&1)",
+      "WebSearch",
+      "WebFetch(domain:resumeworded.com)",
+      "WebFetch(domain:www.hyperclapper.com)"
     ]
   }
 }
