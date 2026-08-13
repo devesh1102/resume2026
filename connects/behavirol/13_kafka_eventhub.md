@@ -34,6 +34,67 @@ This is architecturally identical to the Kafka producer-consumer model:
 
 ---
 
+## Kafka offsets and delivery semantics
+
+Kafka's delivery semantics — **at-least-once, at-most-once, and exactly-once** — depend primarily on when the consumer records its progress relative to processing a message.
+
+An **offset** is a record's sequential position within a partition. A consumer group normally commits the offset of the **next record it should read**. For example, after successfully processing record 100, it commits offset 101.
+
+### 1. At-least-once delivery
+
+**Core rule:** Process first, then commit the offset.
+
+**Guarantee:** A successfully acknowledged message is not skipped, but a message may be processed more than once.
+
+1. The consumer reads record 100.
+2. It performs the business operation, such as writing to a database.
+3. After processing succeeds, it commits offset 101.
+
+If the consumer crashes after step 2 but before step 3, Kafka still has the earlier committed position. After restart or rebalance, record 100 is read and processed again. Consumers therefore need **idempotent processing**, commonly implemented with a database uniqueness constraint, an idempotency key, or a transactional inbox.
+
+> Kafka commonly provides at-least-once processing when offsets are committed only after successful processing. Although `enable.auto.commit=true` is the client default, auto-commit is driven by calls to `poll()` and a timer; it is not automatically coordinated with completion of application processing.
+
+### 2. At-most-once delivery
+
+**Core rule:** Commit the offset before processing.
+
+**Guarantee:** A message is processed no more than once, but it may be lost from the application's perspective.
+
+1. The consumer reads record 100.
+2. It commits offset 101.
+3. It performs the business operation.
+
+If the consumer crashes during step 3, Kafka already considers record 100 consumed. The replacement consumer resumes at offset 101, so record 100 is not retried even though its processing did not complete.
+
+This behavior should be implemented deliberately by committing before processing. A short auto-commit interval alone is not a precise or reliable way to guarantee at-most-once behavior.
+
+### 3. Exactly-once processing
+
+**Core rule:** Make the output and consumed offset visible atomically.
+
+#### Kafka-to-Kafka
+
+Kafka can provide exactly-once semantics when consuming from Kafka, processing, and producing back to Kafka:
+
+1. Begin a producer transaction.
+2. Write the output records.
+3. Add the consumed offsets with `sendOffsetsToTransaction()`.
+4. Commit the transaction.
+
+The output records and offsets either commit together or abort together. Downstream consumers must use `isolation.level=read_committed` to avoid reading aborted transactional records. Kafka Streams provides this model through exactly-once processing mode.
+
+#### Kafka-to-external database
+
+Kafka transactions cannot atomically include an independent database transaction. Practical options are:
+
+- Make the database write idempotent using a message ID and a unique constraint, then commit the Kafka offset after the database transaction succeeds.
+- Store the processed result and an inbox/deduplication record in the same database transaction.
+- Store the consumer position in the same database transaction as the result only when the application also restores and manages its read position from that database; this replaces normal Kafka group-offset management and requires careful rebalance handling.
+
+For external side effects, the realistic guarantee is usually **at-least-once delivery with effectively-once business outcomes through idempotency**, not native end-to-end Kafka exactly-once semantics.
+
+---
+
 ## What to be upfront about
 
 You have NOT operated a raw Kafka cluster (brokers, Zookeeper/KRaft, Kafka Connect, Kafka Streams). If a role specifically requires cluster ops or stream processing with Kafka Streams/ksqlDB, flag it honestly. For application-level usage — producers, consumers, partitioning, at-least-once delivery — your Event Hub experience maps directly.
